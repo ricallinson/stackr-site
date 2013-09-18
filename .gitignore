@@ -1,3 +1,6 @@
+## Custom
+.do_not_check_in
+
 ## generic files to ignore
 *~
 *.lock
