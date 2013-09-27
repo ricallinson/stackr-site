@@ -47,7 +47,7 @@ func MustacheFileRender(filepath string, context ...interface{}) string {
 
 func init() {
     app := stackr.CreateServer()
-    app.Use("/", stackr.Static())
+    app.Use(stackr.Static())
     app.Use("/", func(req *stackr.Request, res *stackr.Response, next func()) {        
         res.SetHeader("content-type", "text/html");
         res.End(MustacheFileRender("./tmpls/index.html", map[string]string{
