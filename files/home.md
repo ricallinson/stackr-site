@@ -35,9 +35,9 @@ Stackr is an extensible HTTP server framework for Go, shipping with over 2 bundl
 
 ## Make Middleware
 
-    func MyMiddleware() (func(req *Request, res *Response, next func())) {
+    func MyMiddleware() (func(req *stackr.Request, res *stackr.Response, next func())) {
         // Prep
-        return func(req *Request, res *Response, next func()) {
+        return func(req *stackr.Request, res *stackr.Response, next func()) {
             // Process
         })
     })
